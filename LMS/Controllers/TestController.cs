@@ -11,9 +11,9 @@ using System.Web.Http;
 
 namespace LMS.Controllers
 {
+    [Authorize]
     public class TestController : ApiController
     {
-
         private readonly IUserManager _userManager;
 
         public TestController(IUserManager userManager)
@@ -21,6 +21,7 @@ namespace LMS.Controllers
             _userManager = userManager;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("api/test/createuser")]
         public IHttpActionResult Post(UserRegisterDto user)

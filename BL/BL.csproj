@@ -71,6 +71,8 @@
   <ItemGroup>
     <Compile Include="BusinessLogicCompositionRoot.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Managers\AuthManager.cs" />
+    <Compile Include="Managers\Interfaces\IAuthManager.cs" />
     <Compile Include="Managers\Interfaces\IStudentManager.cs" />
     <Compile Include="Managers\Interfaces\IUserManager.cs" />
     <Compile Include="Managers\StudentManager.cs" />
