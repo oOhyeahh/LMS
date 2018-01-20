@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace BL.Managers.Interfaces
 {
-    public interface IStudentManager
+    public interface ILectureManager
     {
-        Student CreateStudent(Student student);
+        Lecture CreateLecture(Lecture lecture);
 
-        StudentDto GetStudentById(int id);
+        Lecture GetLectureById(int id);
 
-        List<Student> GetAll();
+        List<Lecture> GetAll();
     }
 }
 

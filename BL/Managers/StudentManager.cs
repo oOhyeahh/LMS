@@ -44,6 +44,11 @@ namespace BL.Managers
             return student;
         }
 
+        public List<Student> GetAll()
+        {
+            return _studentRepository.Records.ToList();
+        }
+
         public StudentDto GetStudentById(int id)
         {
             return Mapper.Map<Student, StudentDto>(_studentRepository.GetById(id));
