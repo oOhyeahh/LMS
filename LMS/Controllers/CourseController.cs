@@ -12,11 +12,12 @@ namespace LMS.Controllers
     public class CourseController : ApiController
     {
         private readonly ICourseManager _courseManager;
-        public CourseController(ICourseManager courseManager)  
+
+        public CourseController(ICourseManager courseManager)
         {
-            _courseManager = courseManager;     
+            _courseManager = courseManager;
         }
-      
+
         [HttpGet]
         public IHttpActionResult Get()
         {
@@ -24,7 +25,8 @@ namespace LMS.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult Get(int id){
+        public IHttpActionResult Get(int id)
+        {
             return Ok(_courseManager.GetCourseById(id));
         }
 
@@ -33,4 +35,5 @@ namespace LMS.Controllers
         {
             return Ok(_courseManager.CreateCourse(course));
         }
+    }
 }

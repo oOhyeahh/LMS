@@ -19,7 +19,8 @@ namespace BL.Managers
         {
             _courseRepository = courseRepository;
         }
-        public  Course CreateCourse(Course course)
+
+        public Course CreateCourse(Course course)
         {
             var result = _courseRepository.Add(course);
             return result;
@@ -35,4 +36,5 @@ namespace BL.Managers
             return _courseRepository.GetById(id);
         }
 
+    }
 }

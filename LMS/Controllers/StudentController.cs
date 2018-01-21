@@ -12,6 +12,7 @@ namespace LMS.Controllers
     public class StudentController : ApiController
     {
         private readonly IStudentManager _studentManager;
+
         public StudentController(IStudentManager studentManager)
         {
             _studentManager = studentManager;
@@ -35,3 +36,4 @@ namespace LMS.Controllers
             return Ok(_studentManager.CreateStudent(student));
         }
     }
+}

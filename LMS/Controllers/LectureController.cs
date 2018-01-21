@@ -12,6 +12,7 @@ namespace LMS.Controllers
     public class LectureController : ApiController
     {
         private readonly ILectureManager _lectureManager;
+
         public LectureController(ILectureManager lectureManager)
         {
             _lectureManager = lectureManager;
@@ -26,7 +27,7 @@ namespace LMS.Controllers
         [HttpGet]
         public IHttpActionResult Get(int id)
         {
-            return Ok(_lectureManager.GetlectureById(id));
+            return Ok(_lectureManager.GetLectureById(id));
         }
 
         [HttpPost]
@@ -35,3 +36,4 @@ namespace LMS.Controllers
             return Ok(_lectureManager.CreateLecture(lecture));
         }
     }
+}

@@ -19,10 +19,16 @@ namespace BL.Managers
         {
             _lectureRepository = lectureRepository;
         }
+
         public Lecture CreateLecture(Lecture lecture)
         {
             var result = _lectureRepository.Add(lecture);
             return result;
+        }
+
+        public Lecture GetLectureById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Lecture> GetAll()
@@ -36,3 +42,4 @@ namespace BL.Managers
         }
 
     }
+}

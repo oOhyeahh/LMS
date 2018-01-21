@@ -21,6 +21,7 @@ namespace Data
             //    .AsImplementedInterfaces();
             builder.RegisterType<LMSEntities>().AsSelf().InstancePerRequest();
             builder.RegisterType<UserRepository>().As<IUserRepository>().InstancePerRequest();
+            builder.RegisterType<StudentRepository>().As<IStudentReporsitory>().InstancePerRequest();
 
         }
     }

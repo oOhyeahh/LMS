@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Data.Repositories
 {
-    public class LectureRepository : GenericRepository<Student>, ILectureRepository
+    public class LectureRepository : GenericRepository<Lecture>, ILectureRepository
     {
         public LectureRepository(LMSEntities context) : base(context)
         {
