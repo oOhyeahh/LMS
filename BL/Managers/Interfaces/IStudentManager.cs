@@ -15,6 +15,8 @@ namespace BL.Managers.Interfaces
         StudentDto GetStudentById(int id);
 
         List<Student> GetAll();
+
+	    StudentDto Update(Student student);
     }
 }
 
